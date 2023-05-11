@@ -30,6 +30,7 @@ public class MainFrame extends JFrame {
     private JTextField tfBuscarPais;
     private JButton calcularPaisButton;
     private JTextField tfResultadoPais;
+    private JButton btnBuscarPorPrio;
 
     private FileInputStream fis;
     private ObjectInputStream entrada;
@@ -98,6 +99,12 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 tfResultadoPais.setText(Integer.toString(puerto.contador(tfBuscarPais.getText())));
+            }
+        });
+        btnBuscarPorPrio.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tfMostrar_id.setText((puerto.buscaContenedoresBase(Integer.parseInt(tfPrioridad.getText()))));
             }
         });
     }
