@@ -75,8 +75,6 @@ public class MainFrame extends JFrame {
                 tfEmisor.setText("");
                 tfId.setText("");
                 tfReceptor.setText("");
-
-
             }
         });
         btnDesapilar.addActionListener(new ActionListener() {
